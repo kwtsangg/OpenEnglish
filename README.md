@@ -1,1 +1,3 @@
 # OpenEnglish
+
+Read goal.md

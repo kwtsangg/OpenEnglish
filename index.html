@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Easy English Translator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>Easy English Translator</h1>
+    <p class="subtitle">Rule-based translator. Not perfect. Designed for clarity and iteration.</p>
+  </header>
+
+  <main class="container grid">
+    <section class="card">
+      <div class="card-header">
+        <h2>English input</h2>
+        <div class="hint">Tip: Ctrl+Enter / ⌘+Enter to translate</div>
+      </div>
+      <textarea id="input" placeholder="Type English here...">Did you eat?
+I will not go.
+They don't know.</textarea>
+
+      <div class="controls">
+        <button id="translateBtn">Translate</button>
+        <button id="clearBtn" class="secondary">Clear</button>
+      </div>
+
+      <div class="toggles">
+        <label class="toggle">
+          <input type="checkbox" id="strictMode" checked />
+          <span>Strict mode (always include <code>na</code>)</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="showSteps" />
+          <span>Show steps</span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Easy English output</h2>
+        <div class="controls-inline">
+          <button id="copyBtn" class="secondary">Copy</button>
+        </div>
+      </div>
+      <textarea id="output" readonly></textarea>
+
+      <details id="stepsPanel" class="steps" hidden>
+        <summary>Translation steps</summary>
+        <div id="steps"></div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div>
+      Particles: <code>pa</code> (past), <code>na</code> (now), <code>fu</code> (future), <code>no</code> (negation), <code>ma</code> (question)
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
